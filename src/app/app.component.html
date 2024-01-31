@@ -1,0 +1,16 @@
+<div class="box">
+  <div>
+    <button (click)="mostrar()" class="Primary-button">Mostrar template</button>
+  </div><br>
+  
+  <div *ngIf="visible; else templateLayout">
+    <div>Soy el contenido inicial</div>
+  </div>
+  
+  <ng-template #templateLayout>
+    <h1>Hola! Soy un template :D</h1>
+  </ng-template>
+</div>
+
+
+<router-outlet></router-outlet>
